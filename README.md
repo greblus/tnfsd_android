@@ -1,6 +1,5 @@
-###TNFSD - TNFS Server for FujiNet
+#TNFSD - TNFS Server for FujiNet
 
-Static arm7 binary for Android can be found in libs/tnfsd
 **Your device DOES NOT HAVE to be rooted.** 
 
 Original files can be found here:
@@ -10,25 +9,31 @@ The tnfsd static arm7 binary is in jni/libs/armeabi-v7a/tnfsd
 
 How to use it without root:
 
-1. Install a terminal emulator eg. Termux from Google Play or:
-    https://termux.com/
+1. Install a terminal emulator eg. Termux from F-Droid (recommended) or Google Play 
+   (not updated anymore).  
 
-2. On non-rooted devices all the removable media are mounted with noexec, 
-   option, so you have to copy tnfsd to Termux's home directory.
-   After starting the terminal:
+2. Run termux-setup-storage which will ask for permissions and set up links to your sdcard directories   in ~/storage.
 
-   cp /storage/emulated/0/Download/tnfsd .
+3. On non-rooted devices all removable media are mounted with noexec 
+   option, so you have to copy tnfsd to Termux's home directory:
 
-3. Same you can do with your Atari goodies, unless read only access 
-   in /storage/emulated/0/Download/somedir is ok for you.
+   cp ./storage/downloads/tnfsd .
 
-4. Run the server ./tnsfd ./ataristuff
+   add +x mode:
 
-5. Check your mobile phone Wifi ip (Settings -> About phone -> 
+   chmod +x ./tnfsd
+
+4. Run the server ./tnsfd ./storage/downloads/ataristuff
+
+5. Check your mobile phone Wifi IP (Settings -> About phone -> 
    All parameters -> Status (or something similar).
 
 6. Add your server's ip to hosts lists of your FujiNet.
 
-7. Enjoy!
+7. If you are not a console type of guy check Termux wiki 
+   https://wiki.termux.com/wiki/Main_Page - especially addons: 
+   Termux:Widget and Termux:Boot.
+
+8. Enjoy!
 
 
